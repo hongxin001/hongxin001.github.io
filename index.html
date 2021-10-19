@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hongxin Wei</title>
+
+    <!-- Meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom Styles -->
+    <style>
+          body {
+            font-family: 'sans-serif';
+            font-size: 16px;
+            background-color: #FFFFFF;
+            color: #4F6071;
+          }
+          #header {
+            background-color: #f4f4f4;
+            /*background-color: #FFFFFF;*/
+            display: flex;
+            align-items: flex-end;
+            padding-top:60px;
+            padding-bottom:60px;
+          }
+          #footer {
+            background-color: #FFFFFF;
+            padding:60px;
+          }
+          #portrait {
+            border: 3px solid white;
+          }
+          #header-text {
+            margin-top: 60px;
+            margin-left: 220px;
+          }
+          #header-text-name {
+            font-size: 40px;
+          }
+          #header-text-email {
+            font-size: 20px;
+            font-style: italic;
+          }
+          .header-text-desc {
+            font-size: 20px;
+          }
+          .vspace-top {
+            margin-top: 30px;
+          }
+          .vspace-top-news {
+              margin-top: 15px;
+          }
+          .vspace-top-conferences {
+            margin: auto;
+            width: 100%;
+          }
+          .paper-image {
+            width: 150px;
+          }
+          .news-date {
+              font-weight: bold;
+          }
+          .paper-title {
+            font-weight: bold;
+          }
+          .paper-authors {
+            font-style: italic;
+          }
+    </style>
+</head>
+
+<body>
+    <div id='header'>
+        <div class='container'>
+            <div class='row'>
+                <div class="col-sm-3 offset-sm-1">
+                    <img src='imgs/cat.jpg' class='img-fluid' id='portrait'>
+                </div>
+
+                <div class="col">
+                  <div id='header-text-name'>
+                    Hongxin Wei
+                  </div>
+                  <div id='header-text-email'>
+                    Ph.D. student @ School of Computer Science and Engineering </br> Nanyang Technological University
+                  </div>
+                  <div id='header-text-email'>
+                    hongxin001 [at] e.ntu.edu.sg  /  owenwei [at] ntu.edu.sg
+                  </div>
+                  <div>
+                    <a href="https://github.com/hongxin001", target="_blank">[GitHub]</a>
+                    <a href="https://scholar.google.com/citations?user=cABH034AAAAJ&hl=en", target="_blank">[Google Scholar]</a>
+                    <a href="docs/CV_hongxin_2021_10_19.pdf", target="_blank">[Download CV]</a>
+                  </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class='container'>
+        <div class='row vspace-top'>
+            <div class='col offset-sm-1'>
+                <h1>Bio</h1>
+                <p>
+                    I am a thrid-year Ph.D. student at <a href="http://scse.ntu.edu.sg/Pages/Home.aspx" target="_blank">School of Computer Science and Engineering (SCSE)</a>, <a href="https://www.ntu.edu.sg/Pages/home.aspx" target="_blank">Nanyang Technological University (NTU)</a>, supervised by <a href="https://personal.ntu.edu.sg/boan/" target="_blank">Prof. Bo An</a>.
+                    Previously I spent a wonderful year as a research assistant in <a href="https://iiis.tsinghua.edu.cn/" target="_blank">the Institute for Interdisciplinary Information Sciences (IIIS)</a> at Tsinghua University, working with Prof. Pingzhong Tang.
+                    Prior to that, I received my B.A. in Software Engineering from <a href="http://english.hust.edu.cn/" target="_blank">Huazhong University of Science and Technology (HUST)</a> in 2016.
+                    
+                    My research interest lies in robust deep learning, including robustness against noisy labels, Out-of-distribution examples, and adversarial examples.
+                    The goal of my research is to develop reliable learning systems, which can work safely and adaptively in the presence of noisy/biased/malicious data stream in either the train or test datasets.
+                    <!-- Most of my work explore, understand, and mitigate the problem settings where neural networks would naturally fails. -->
+                    Research topics that I am currently working on include:
+                </p>
+                <li> <i>Learning with (open-set) noisy labels;</i> </li>
+                <li> <i>Out-of-distribution detection;</i> </li>
+                <li> <i>Adversarial attack and defense; </i> </li>
+                <li> <i>Uncertainty estimation. </i> </li>
+
+
+                <div class='vspace-top'>
+                    <h1>News</h1>
+                </div>
+
+                <div class='row vspace-top-news'>
+                    <div class="col-sm-2 news-date">
+                        October 2021
+                    </div>
+                    <div class="col">
+                        I am honored to receive NeurIPS 2021 Outstanding Reviewer Award (top 8% of reviewers).
+                    </div>
+                </div>
+
+                <div class='row vspace-top-news'>
+                    <div class="col-sm-2 news-date">
+                        June 2021
+                    </div>
+                    <div class="col">
+                        I will be serving as a reviewer for ICLR 2022.
+                    </div>
+                </div>
+
+                <div class='row vspace-top-news'>
+                    <div class="col-sm-2 news-date">
+                        April 2021
+                    </div>
+                    <div class="col">
+                        I will be serving as a reviewer for NeurIPS 2021.
+                    </div>
+                </div>
+
+                <div class='row vspace-top-news'>
+                    <div class="col-sm-2 news-date">
+                        January 2021
+                    </div>
+                    <div class="col">
+                        I will be serving as a reviewer for ICML 2021.
+                    </div>
+                </div>
+
+
+                <div class='vspace-top'>
+                    <h1>Publications</h1>
+                </div>
+
+                <div class='row vspace-top'>
+                    <!-- <div class="col-sm-3">
+                        <video width="100%" playsinline="" autoplay="" loop="" preload="" muted="">
+                            <source src="lfns/img/rooms_360_compressed.mp4" type="video/mp4">
+                        </video>
+                    </div> -->
+
+                    <div class="col">
+                        <div class='paper-title'>
+                            Open-Sampling: Re-balancing Long-tailed datasets with Out-of-Distribution data.
+                        </div>
+                        <div class='paper-desc'>
+                            Under Review
+                        </div>
+                        <div class='paper-authors'>
+                            <u>Hongxin Wei</u>, Lue Tao, Renchunzi Xie, Lei Feng, Bo An
+                        </div>
+                    </div>
+                </div>
+
+                <div class='row vspace-top'>
+                    <!-- <div class="col-sm-3">
+                        <video width="100%" playsinline="" autoplay="" loop="" preload="" muted="">
+                            <source src="siren/img/poisson_convergence_15s_label.mp4" type="video/mp4">
+                        </video>
+                    </div> -->
+
+                    <div class="col">
+                        <div class='paper-title'>
+                            GearNet: Stepwise Dual Learning for Weakly Supervised Domain Adaptation.
+                        </div>
+                        <div class='paper-desc'>
+                            Under Review
+                        </div>
+                        <div class='paper-authors'>
+                            Renchunzi Xie, <u>Hongxin Wei*</u>, Lei Feng,  Bo An.
+                        </div>
+                    </div>
+                </div>
+
+                <div class='row vspace-top'>
+                    <!-- <div class="col-sm-3">
+                        <video width="100%" playsinline="" autoplay="" loop="" preload="" muted="">
+                            <source src="metasdf/img/metasdf_steps_comp.mp4" type="video/mp4">
+                        </video>
+                    </div> -->
+
+                    <div class="col">
+                        <div class='paper-title'>
+                            Open-set Label Noise Can Improve Robustness Against Inherent Label Noise.
+                        </div>
+                        <div class='paper-desc'>
+                            NeurIPS 2021
+                        </div>
+                        <div class='paper-authors'>
+                            <u>Hongxin Wei</u>, Lue Tao, Renchunzi Xie, Bo An.
+                        </div>
+                        <div>
+                            <a href="https://arxiv.org/pdf/2106.10891.pdf">[Paper]</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class='row vspace-top'>
+                    <!-- <div class="col-sm-3">
+                        <img src='imgs/onn_thumbnail.jpg' class='img-fluid'>
+                    </div> -->
+
+                    <div class="col">
+                      <div class='paper-title'>
+                        Alleviating Noisy-label Effects in Image Classification via Probability Transition Matrix
+                      </div>
+                      <div class='paper-desc'>
+                        BMVC 2021
+                      </div>
+                      <div class='paper-authors'>
+                        Ziqi Zhang, Yuexiang Li, <u>Hongxin Wei</u>, Kai Ma, Tao Xu, Yefeng Zheng
+                      </div>
+                      <div>
+                        <a href="https://arxiv.org/pdf/2110.08866.pdf">[Paper]</a>
+                      </div>
+                    </div>
+                </div>
+
+                <div class='row vspace-top'>
+                    <!-- <div class="col-sm-3">
+                        <video width="100%" playsinline="" autoplay="" loop="" preload="" muted="">
+                            <source src="metasdf/img/metasdf_steps_comp.mp4" type="video/mp4">
+                        </video>
+                    </div> -->
+
+                    <div class="col">
+                        <div class='paper-title'>
+                            Multiple-Instance Learning from Similar and Dissimilar Bags
+                        </div>
+                        <div class='paper-desc'>
+                            SIGKDD 2021
+                        </div>
+                        <div class='paper-authors'>
+                            Lei Feng, Senlin Shu, Yuzhou Cao, Lue Tao, <u>Hongxin Wei</u>, Tao Xiang, Bo An, Gang Niu.
+                        </div>
+                        <div>
+                            <a href="https://personal.ntu.edu.sg/boan/papers/KDD21_Multiinstance.pdf">[Paper]</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class='row vspace-top'>
+                    <!-- <div class="col-sm-3">
+                        <img src='imgs/star_img.png' class='img-fluid'>
+                    </div> -->
+
+                    <div class="col">
+                        <div class='paper-title'>
+                            MetaInfoNet: Learning Task-Guided Information for Sample Reweighting.
+                        </div>
+                        <div class='paper-desc'>
+                            Preprints
+                        </div>
+                        <div class='paper-authors'>
+                            <u>Hongxin Wei</u>, Lei Feng, Rundong Wang, Bo An.
+                        </div>
+                        <div>
+                            <a href="https://arxiv.org/pdf/2012.05273.pdf">[Paper]</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class='row vspace-top'>
+                    <!-- <div class="col-sm-3">
+                        <img src='imgs/srn_seg_repimage.jpg' class='img-fluid'>
+                    </div> -->
+
+                    <div class="col">
+                        <div class='paper-title'>
+                            Deep Learning from Multiple Noisy Annotators as A Union.
+                        </div>
+                        <div class='paper-desc'>
+				            Under Review
+                        </div>
+                        <div class='paper-authors'>
+                            <u>Hongxin Wei</u>, Renchunzi Xie, Lei Feng, Bo Han, Bo An.
+                        </div>
+                    </div>
+                </div>
+
+                <div class='row vspace-top'>
+                    <!-- <div class="col-sm-3">
+                        <img src='imgs/SRNs.gif' class='img-fluid'>
+                    </div> -->
+
+                    <div class="col">
+                        <div class='paper-title'>
+                            Commission Fee is not Enough: A Hierarchical Reinforced Framework for Portfolio Management.
+                        </div>
+                        <div class='paper-desc'>
+                            AAAI 2021
+                        </div>
+                        <div class='paper-authors'>
+                            Rundong Wang, <u>Hongxin Wei</u>, Bo An, Zhouyan Feng, Jun Yao.
+                        </div>
+                        <div>
+                            <a href="https://personal.ntu.edu.sg/boan/papers/AAAI21_Stock.pdf">[Paper]</a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class='row vspace-top'>
+                    <!-- <div class="col-sm-3">
+                        <img src='imgs/deepvoxels.png' class='img-fluid'>
+                    </div> -->
+
+                    <div class="col">
+                      <div class='paper-title'>
+                        Embedding-Augmented Generalized Matrix Factorization for Recommendation with Implicit Feedback.
+                      </div>
+                      <div class='paper-desc'>
+                        IEEE Intelligent Systems (IEEE-IS)
+                      </div>
+                      <div class='paper-authors'>
+                        Lei Feng, <u>Hongxin Wei</u>, Qingyu Guo, Zhuoyi Lin, Bo An.
+                      </div>
+                      <div>
+                         <a href="https://ieeexplore.ieee.org/document/9252133">[Paper]</a>
+                      </div>
+                    </div>
+                </div>
+
+
+                <div class='row vspace-top'>
+                    <!-- <div class="col-sm-3">
+                        <img src='imgs/end-to-end-cam.jpg' class='img-fluid'>
+                    </div> -->
+
+                    <div class="col">
+                      <div class='paper-title'>
+                        Combating noisy labels by agreement: A joint training method with co-regularization
+                      </div>
+                      <div class='paper-desc'>
+                          CVPR 2020
+                      </div>
+                      <div class='paper-authors'>
+                        <u>Hongxin Wei</u>, Lei Feng, Xiangyu Chen, Bo An.
+                      </div>
+                      <div>
+                         <a href="https://arxiv.org/pdf/2003.02752.pdf">[Paper]</a>
+                         <a href="https://github.com/hongxin001/JoCoR">[Code]</a>
+                      </div>
+                    </div>
+                </div>
+                <div class='vspace-top'>
+                    <h1>Relevant Conferences</h1>
+                </div>
+                <div class='row vspace-top-conferences'>
+                    <iframe src="https://confsearch.ethz.ch/confsearch/faces/pages/staticresults.jsp?query=aaai%20ijcai%20kdd%20icml%20www%20NeurIPS%20cvpr%20iccv%20iclr&sortMode=1&graphicView=1" height="700" width="800" name="confsearch_frame"
+                        frameborder="0"> </iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id='footer' class='vspace-top'>
+    <div>
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>

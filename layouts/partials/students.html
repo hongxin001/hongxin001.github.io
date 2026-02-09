@@ -1,0 +1,114 @@
+<section id="students" class="section">
+  <div class="container">
+    <h2 class="section-title">{{ .Site.Data.students.lab_name }}</h2>
+    <p style="color: black; margin-bottom: 2rem;">{{ .Site.Data.students.lab_description }}</p>
+
+    <h3 class="student-category-title">Current members</h3>
+    <div class="grid-students">
+      {{/* Postdocs */}}
+      {{ with .Site.Data.students.postdoc }}
+      {{ range . }}
+      <div class="student-card">
+        <!-- <img src="{{ if .photo }}{{ .photo }}{{ else }}/img/avatar_placeholder.svg{{ end }}" class="student-avatar"
+          alt="{{ .name }}"> -->
+        <div class="student-info">
+          <div class="student-name">
+            {{ if .url }}<a href="{{ .url }}" target="_blank">{{ .name }}</a>{{ else }}{{ .name }}{{ end }}
+          </div>
+          <div class="student-meta" style="color: #000; font-weight: 600;">Postdoc</div>
+          <div class="student-meta">{{ .background }}</div>
+        </div>
+      </div>
+      {{ end }}
+      {{ end }}
+
+      {{/* PhDs */}}
+      {{ with .Site.Data.students.phd }}
+      {{ range . }}
+      <div class="student-card">
+        <!-- <img src="{{ if .photo }}{{ .photo }}{{ else }}/img/avatar_placeholder.svg{{ end }}" class="student-avatar"
+          alt="{{ .name }}"> -->
+        <div class="student-info">
+          <div class="student-name">
+            {{ if .url }}<a href="{{ .url }}" target="_blank">{{ .name }}</a>{{ else }}{{ .name }}{{ end }}
+          </div>
+          <div class="student-meta" style="color: #000; font-weight: 600;">Ph.D. Student</div>
+          <div class="student-meta">{{ .background }}</div>
+        </div>
+      </div>
+      {{ end }}
+      {{ end }}
+
+      {{/* Masters */}}
+      {{ with .Site.Data.students.master }}
+      {{ range . }}
+      <div class="student-card">
+        <!-- <img src="{{ if .photo }}{{ .photo }}{{ else }}/img/avatar_placeholder.svg{{ end }}" class="student-avatar"
+          alt="{{ .name }}"> -->
+        <div class="student-info">
+          <div class="student-name">
+            {{ if .url }}<a href="{{ .url }}" target="_blank">{{ .name }}</a>{{ else }}{{ .name }}{{ end }}
+          </div>
+          <div class="student-meta" style="color: #000; font-weight: 600;">Master Student</div>
+          <div class="student-meta">{{ .background }}</div>
+        </div>
+      </div>
+      {{ end }}
+      {{ end }}
+
+      {{/* RAs */}}
+      {{ with .Site.Data.students.research_assistants }}
+      {{ range . }}
+      <div class="student-card">
+        <!-- <img src="{{ if .photo }}{{ .photo }}{{ else }}/img/avatar_placeholder.svg{{ end }}" class="student-avatar"
+          alt="{{ .name }}"> -->
+        <div class="student-info">
+          <div class="student-name">
+            {{ if .url }}<a href="{{ .url }}" target="_blank">{{ .name }}</a>{{ else }}{{ .name }}{{ end }}
+          </div>
+          <div class="student-meta" style="color: #000; font-weight: 600;">Research Assistant</div>
+          <div class="student-meta">{{ .background }}</div>
+        </div>
+      </div>
+      {{ end }}
+      {{ end }}
+
+      {{/* Interns */}}
+      {{ with .Site.Data.students.research_interns }}
+      {{ range . }}
+      <div class="student-card">
+        <!-- <img src="{{ if .photo }}{{ .photo }}{{ else }}/img/avatar_placeholder.svg{{ end }}" class="student-avatar"
+          alt="{{ .name }}"> -->
+        <div class="student-info">
+          <div class="student-name">
+            {{ if .url }}<a href="{{ .url }}" target="_blank">{{ .name }}</a>{{ else }}{{ .name }}{{ end }}
+          </div>
+          <div class="student-meta" style="color: #000; font-weight: 600;">Research Intern</div>
+          <div class="student-meta">{{ .background }}</div>
+        </div>
+      </div>
+      {{ end }}
+      {{ end }}
+    </div>
+
+    {{ with .Site.Data.students.past_members }}
+    <h3 class="student-category-title" style="margin-top: 2rem;">Past Members</h3>
+    <div class="grid-students">
+      {{ range . }}
+      <div class="student-card">
+        <div class="student-info">
+          <div class="student-name">
+            {{ .name }}
+          </div>
+          <div class="student-meta" style="color: #000; font-weight: 600;">{{ .background }}</div>
+          <div class="student-meta">
+            {{ if .now }}{{ .now }}{{ end }}
+          </div>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+    {{ end }}
+
+  </div>
+</section>

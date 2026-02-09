@@ -1,0 +1,21 @@
+<section id="publications" class="section">
+  <div class="container">
+    <h2 class="section-title"><i class="fas fa-book"></i> Papers</h2>
+    <div class="pub-header">
+      <div class="pub-tabs" id="pub-tabs">
+        <button class="pub-tab" data-tab="working">Working Papers</button>
+        <button class="pub-tab active" data-tab="selected">Selected Publications</button>
+      </div>
+      <div class="pub-legend">
+        <sup>*</sup> Corresponding author &nbsp;&nbsp; <sup>&#8224;</sup> Equal contribution
+      </div>
+    </div>
+    <div id="pub-content" class="pub-content">
+      <p class="pub-loading"><i class="fas fa-spinner fa-spin"></i> Loading publications...</p>
+    </div>
+  </div>
+</section>
+
+<script>
+  window.bibtexData = {{ readFile "static/bib/papers.bib" | jsonify }};
+</script>

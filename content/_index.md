@@ -1,0 +1,9 @@
+---
+title: "Hongxin Wei"
+---
+
+I am an Assistant Professor (Principal investigator, PhD supervisor) in [the Department of Statistics and Data Science](https://stat-ds.sustech.edu.cn/) at [SUSTech](https://www.sustech.edu.cn/en/) (China, Shenzhen). I obtained my Ph.D. degree at the [School of Computer Science and Engineering](http://scse.ntu.edu.sg/Pages/Home.aspx), [Nanyang Technological University](https://www.ntu.edu.sg/Pages/home.aspx), supervised by [Prof. Bo An](https://personal.ntu.edu.sg/boan/). During my Ph.D, I was fortunate to work as a visiting scholar in the group of [Prof. Sharon Yixuan Li](https://pages.cs.wisc.edu/~sharonli/) at the [University of Wisconsin Madison](https://www.cs.wisc.edu/) in 2022. Previously I spent a wonderful year as a research assistant in [the Institute for Interdisciplinary Information Sciences](https://iiis.tsinghua.edu.cn/) at Tsinghua University. Prior to that, I received my B.E. in Software Engineering from [Huazhong University of Science and Technology](http://english.hust.edu.cn/) in 2016.
+
+My research interest falls in the scope of reliable machine learning (uncertainty estimation), and its applications in data optimization and privacy. Generally, we expect deep learning models to produce precise estimation of their uncertainty in predictions, using the form of probabilities (confidences in ML) or conformal prediction sets. Besides, my research is closely related to data-centric machine learning and foundation model, like data quality and efficiency. We are also interested in the statistic theory of data selection in machine learning, which provides theoretical principles to guide the data optimization in machine learning workflows.
+
+<p style="color: #1E90FF"><b>We are always actively looking for Postdocs, PhDs, and RA/interns to join our research.</b></p>

@@ -1,0 +1,110 @@
+lab_name: "Lab Members"
+lab_description: >
+  Our research group at SUSTech focuses on reliable machine learning, uncertainty estimation, 
+  data optimization, and privacy. We aim to develop deep learning models that can produce 
+  precise estimation of their uncertainty and improve data quality and efficiency in machine 
+  learning workflows.
+
+postdoc:
+  - name: "Hao Zeng"
+    background: "Ph.D., Xiamen University (co-supervised with Prof. B. Jing)"
+    start: "2024"
+    photo: ""
+
+phd:
+  - name: "Shuoyuan Wang"
+    background: "M.S., University of Macau"
+    start: "2023"
+
+  - name: "Hengxiang Zhang"
+    background: "M.S., UESTC"
+    start: "2023"
+
+  - name: "Hanjie Yang"
+    background: "M.S., DUT"
+    start: "2024"
+
+  - name: "Xiaoqi Qiu"
+    background: "M.S., SZU"
+    start: "2024"
+
+  - name: "Zhenlong Liu"
+    background: "B.S., SUSTech"
+    start: "2023"
+
+master:
+  - name: "Beier Luo"
+    background: "B.S., SUSTech"
+    start: "2024"
+    photo: "img/students/beier.jpg"
+
+  - name: "Cong Ding"
+    background: "Now Intern at Tencent"
+    start: "2023"
+
+  - name: "Jiaxi Ren"
+    background: "B.S., SUSTech"
+    start: "2024"
+
+  - name: "Xuhui Yi"
+    background: "B.S., WUST"
+    start: "2024"
+
+research_assistants:
+  - name: "Huajun Xi"
+    background: "B.S., SUSTech"
+
+research_interns:
+  - name: "Haotian Zhang"
+    background: "M.S. student, DUT"
+
+  - name: "Wenbo Liao"
+    background: "Ph.D. student, CUHK"
+
+  - name: "Qingyang Hao"
+    background: "M.S., THU(SZ)"
+
+  - name: "Yuhan Li"
+    background: "Undergraduate student, SDU(Weihai)"
+
+  - name: "Zihao Shi"
+    background: "M.S. student, FDU"
+
+past_members:
+  - name: "Jianguo Huang"
+    background: "Research Intern (2023-2024)"
+    now: "Ph.D. student at NTU, Singapore"
+
+  - name: "Qiqi Tao"
+    background: "Research Intern (2024)"
+    now: "Ph.D. student at SUTD, Singapore"
+
+  - name: "Hongfu Gao"
+    background: "Research Intern (2024)"
+    now: "Ph.D. student at NUS"
+
+  - name: "Jianqing Song"
+    background: "Research Intern (2024)"
+    now: "Ph.D. student at Nanjing University"
+
+  - name: "Wenyu Jiang"
+    background: "Research Intern (2023-2024)"
+    now: "Ph.D. student at Nanjing University"
+
+  - name: "Kangdao Liu"
+    background: "Research Intern (2024)"
+    now: "Ph.D. student at University of Macau"
+
+  - name: "Qiang Hu"
+    background: "Undergraduate student at SUSTech (2025)"
+    now: "Ph.D. student at SUNY Buffalo"
+
+  - name: "Xuanning Zhou"
+    background: "Research Intern (2024-2025)"
+    now: "Mphil at CUHK(SZ)"
+
+recruitment: >
+  I am always actively looking for Postdocs, PhDs, and RA/interns to join our research. 
+  If you are interested, please send an email to weihx@sustech.edu.cn with your CV and 
+  transcripts attached. For more details, please refer to [this page](https://zhuanlan.zhihu.com/p/665497780?).
+

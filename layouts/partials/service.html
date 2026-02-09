@@ -1,0 +1,13 @@
+<section id="service" class="section">
+  <div class="container">
+    <h2 class="section-title"><i class="fas fa-tasks"></i> Academic Service</h2>
+    <ul class="service-list fa-ul">
+      {{ range .Site.Data.service }}
+      <li>
+        <span class="fa-li"><i class="fas fa-check-circle text-primary"></i></span>
+        <strong>{{ .role }}</strong>: {{ .items }}
+      </li>
+      {{ end }}
+    </ul>
+  </div>
+</section>

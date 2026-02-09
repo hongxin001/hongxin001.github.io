@@ -1,0 +1,918 @@
+/* === Reset & Base === */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* Colors */
+  --primary: #2c3e50;
+  /* Midnight Blue */
+  --accent: #4a90e2;
+  /* Academic Blue */
+  --accent-secondary: #e74c3c;
+  /* Soft Red for highlights */
+  --bg-body: #ffffff;
+  --bg-light: #f8f9fa;
+  --text-main: #2c3e50;
+  --text-muted: #6c757d;
+  --border-color: #e9ecef;
+
+  /* Typography */
+  --font-heading: system-ui, -apple-system, sans-serif;
+  --font-body: system-ui, -apple-system, sans-serif;
+  --font-mono: monospace;
+
+  /* Spacing & Layout */
+  --nav-height: 64px;
+  --radius: 8px;
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.07);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+html {
+  font-size: 18px;
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--nav-height) + 2rem);
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--text-main);
+  background: var(--bg-body);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: #4a90e2;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+a:hover {
+  color: #357abd;
+  text-decoration: underline;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  color: var(--primary);
+  line-height: 1.3;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  position: relative;
+  display: inline-block;
+}
+
+h2::after {
+  content: '';
+  display: block;
+  width: 25px;
+  height: 4px;
+  background: var(--accent);
+  margin-top: 8px;
+  border-radius: 2px;
+}
+
+.text-recruit {
+  color: #4a90e2;
+  font-weight: 500;
+}
+
+h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+ul {
+  padding-left: 1.2rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+.container {
+  /*页面宽度*/
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* === Navbar === */
+.top-nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border-color);
+  height: var(--nav-height);
+  box-shadow: var(--shadow-sm);
+}
+
+.nav-inner {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-brand {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--primary);
+  letter-spacing: -0.5px;
+}
+
+.nav-brand:hover {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-toggle {
+  display: none;
+  /* Hidden on desktop */
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--primary);
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.nav-links a {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--primary);
+}
+
+/* === Sections === */
+.section {
+  padding: 2rem 0;
+}
+
+/* --- Section Spacing Adjustments --- */
+
+/* 1. Distance between About and News */
+#about {
+  padding-bottom: 0rem;
+}
+
+#news {
+  /* This controls the gray area vertical size */
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+/* 2. Distance between Academic Service and Publication */
+#publications {
+  /* White space below Publications */
+  padding-bottom: 2rem;
+}
+
+#service {
+  /* Gray space inside the Service box */
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+/* 3. Distance between Service and Lab Members */
+#students {
+  /* White space above Lab Members */
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.section:nth-child(even) {
+  background-color: var(--bg-light);
+  border-radius: 12px;
+  /* 
+     [Gray Border Distance]
+     If you want to add gap between the gray box and white sections:
+     Uncomment and adjust the margin below:
+  */
+  margin: 2rem 0;
+}
+
+/* === Hero === */
+.hero {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 3rem;
+  align-items: center;
+  padding: 2rem 0;
+}
+
+.hero-photo {
+  position: relative;
+}
+
+.hero-photo img {
+  width: 100%;
+  border-radius: 12px;
+  /* Soft square */
+  box-shadow: var(--shadow-lg);
+  transition: transform 0.3s ease;
+}
+
+.hero-photo img:hover {
+  transform: scale(1.02);
+}
+
+.hero-text h1 {
+  color: var(--primary);
+}
+
+.hero-subtitle {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+  font-weight: 400;
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--bg-light);
+  color: var(--text-main);
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+  background: var(--primary);
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+/* === News (Modern List) === */
+.news-container {
+  max-height: 400px;
+  overflow-y: auto;
+  padding-right: 1rem;
+}
+
+/* Scrollbar styling */
+.news-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.news-container::-webkit-scrollbar-track {
+  background: var(--bg-light);
+}
+
+.news-container::-webkit-scrollbar-thumb {
+  background: #cbd5e0;
+  border-radius: 3px;
+}
+
+.news-item {
+  display: flex;
+  gap: 1.5rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.news-item:last-child {
+  border-bottom: none;
+}
+
+.news-date {
+  flex-shrink: 0;
+  width: 100px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--accent-secondary);
+  font-family: var(--font-heading);
+}
+
+.news-text {
+  font-size: 0.95rem;
+}
+
+.news-text a {
+  color: #4a90e2;
+  text-decoration: none;
+}
+
+.news-text a:hover {
+  text-decoration: underline;
+  color: #357abd;
+}
+
+/* === Publications === */
+.pub-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid var(--border-color);
+}
+
+.pub-tabs {
+  display: flex;
+  gap: 1rem;
+}
+
+.pub-legend {
+  font-size: 0.75rem;
+  color: #999;
+  padding-bottom: 0.8rem;
+}
+
+.pub-legend i {
+  font-size: 0.55rem;
+  opacity: 0.7;
+}
+
+.pub-tab {
+  background: none;
+  border: none;
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  padding: 0.8rem 1.5rem;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
+  transition: all 0.2s;
+}
+
+.pub-tab:hover {
+  color: var(--primary);
+}
+
+.pub-tab.active {
+  color: var(--primary);
+  border-bottom-color: var(--primary);
+}
+
+.pub-entry-card {
+  display: flex;
+  flex-direction: column;
+  /* Mobile first */
+  background: #fff;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  border-left: 4px solid var(--accent);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  transition: var(--shadow-md);
+}
+
+.pub-entry-card:hover {
+  box-shadow: var(--shadow-md);
+  border-color: #d1d9e2;
+}
+
+/* .pub-entry-card.selected {
+  border-left: 4px solid var(--accent);
+} */
+
+/* @media (min-width: 768px) {
+  .pub-entry-card.selected {
+    flex-direction: row;
+    gap: 1.5rem;
+  }
+} */
+
+.pub-thumb-container {
+  display: none;
+}
+
+.pub-thumb {
+  width: 100%;
+  border-radius: 4px;
+  border: 1px solid var(--border-color);
+}
+
+.pub-info {
+  flex-grow: 1;
+}
+
+.pub-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--primary);
+}
+
+.pub-authors {
+  font-size: 0.95rem;
+  color: var(--text-main);
+  margin-bottom: 0.4rem;
+}
+
+.pub-venue {
+  font-style: italic;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 0.8rem;
+}
+
+.badge {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 4px;
+  background: var(--bg-light);
+  /* Default/Fallback */
+  color: var(--text-muted);
+  /* Default/Fallback */
+  margin-right: 0.5rem;
+  vertical-align: middle;
+  border: 1px solid #ddd;
+}
+
+/* Specific badge colors can be added if .badge classes are specific (e.g. .badge-conf, .badge-jour) */
+
+.pub-award {
+  color: var(--accent-secondary);
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 0.8rem;
+}
+
+.pub-links {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+
+.pub-link {
+  color: #4a90e2;
+  font-weight: 600;
+  text-decoration: none;
+  margin-right: 0.5rem;
+}
+
+.pub-link:hover {
+  text-decoration: underline;
+  color: #357abd;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.3rem 0.8rem;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid var(--border-color);
+  color: var(--text-muted);
+}
+
+.btn-outline:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+  background: var(--bg-light);
+  transform: translateY(-1px);
+}
+
+/* === Students Grid === */
+.grid-students {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.student-card {
+  background: #fff;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: left;
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.student-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-color: var(--accent);
+}
+
+.student-avatar {
+  display: block;
+  width: 140px;
+  height: 140px;
+  border-radius: 12px;
+  object-fit: cover;
+  margin: 0 auto 1rem;
+  box-shadow: var(--shadow-md);
+  transition: transform 0.3s ease;
+}
+
+.student-avatar:hover {
+  transform: scale(1.02);
+}
+
+.student-name {
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 0.3rem;
+  display: block;
+  color: var(--primary);
+}
+
+.student-role {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  display: block;
+}
+
+.student-meta {
+  font-size: 0.8rem;
+  color: #999;
+  margin-top: 0.5rem;
+}
+
+/* === Footer === */
+.site-footer {
+  background: var(--bg-light);
+  padding: 3rem 0;
+  text-align: center;
+  margin-top: 4rem;
+  border-top: 1px solid var(--border-color);
+  color: var(--text-muted);
+}
+
+
+
+/* === Utility === */
+.mb-1 {
+  margin-bottom: 1rem;
+}
+
+.mb-2 {
+  margin-bottom: 2rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.bg-white {
+  background: #fff !important;
+}
+
+/* === Styles for Service & Teaching Lists (if simple lists) === */
+.service-list li {
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.service-list li::before {
+  content: "•";
+  color: var(--accent);
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+.talks-list {
+  padding-left: 1.25rem;
+}
+
+.talks-hidden {
+  display: none;
+}
+
+.talks-list.expanded .talks-hidden {
+  display: list-item;
+}
+
+.btn-show-more {
+  margin-top: .75rem;
+  background: none;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  padding: .35rem 1rem;
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-family: inherit;
+  font-size: .85rem;
+}
+
+.btn-show-more:hover {
+  background: var(--accent);
+  color: #fff;
+}
+
+/* === Publications === */
+.pub-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  margin-bottom: 1.25rem;
+}
+
+.pub-tab {
+  background: none;
+  border: 1px solid var(--border);
+  padding: .35rem 1rem;
+  border-radius: 50px;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: .85rem;
+  font-weight: 500;
+  transition: all .15s;
+}
+
+.pub-tab.active {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+
+.pub-loading {
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.pub-entry {
+  margin-bottom: 1.25rem;
+}
+
+.pub-entry-selected {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.pub-thumb {
+  width: 180px;
+  height: 120px;
+  flex-shrink: 0;
+  object-fit: cover;
+  border-radius: var(--radius);
+  background: #f0f0f0;
+}
+
+.pub-info {
+  flex: 1;
+}
+
+.pub-title {
+  font-weight: 600;
+  margin-bottom: .15rem;
+}
+
+.pub-authors {
+  font-size: .85rem;
+  color: var(--text-muted);
+  margin-bottom: .15rem;
+}
+
+.pub-venue {
+  font-size: .85rem;
+}
+
+.pub-abbr {
+  display: inline-block;
+  background: var(--accent);
+  color: #fff;
+  font-size: .7rem;
+  font-weight: 600;
+  padding: .1rem .4rem;
+  border-radius: 3px;
+  margin-right: .35rem;
+  vertical-align: middle;
+}
+
+.pub-links {
+  margin-top: .25rem;
+  font-size: .8rem;
+}
+
+.pub-links a {
+  margin-right: .75rem;
+}
+
+.pub-award {
+  color: #d32f2f;
+  font-weight: 600;
+  font-size: .85rem;
+  margin-top: .2rem;
+}
+
+.pub-year-heading {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 1.25rem 0 .5rem;
+  color: var(--accent);
+}
+
+/* === Service, Awards === */
+.service-list {
+  padding-left: 1.25rem;
+}
+
+.awards-list {
+  list-style: none;
+  padding: 0;
+}
+
+.awards-list li {
+  display: flex;
+  align-items: baseline;
+  gap: .5rem;
+  margin-bottom: .45rem;
+}
+
+.award-icon {
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+/* === Teaching === */
+.teaching-course {
+  margin-bottom: 1.5rem;
+}
+
+.teaching-course h3 a {
+  font-weight: 400;
+  font-size: .9rem;
+}
+
+.teaching-course ul {
+  margin-top: .35rem;
+}
+
+/* === Students === */
+.recruitment {
+  margin-top: 1.25rem;
+  padding: 1rem;
+  background: var(--accent-light);
+  border-radius: var(--radius);
+}
+
+/* === Footer === */
+.site-footer {
+  text-align: center;
+  padding: 2rem 1.25rem;
+  font-size: .8rem;
+  color: var(--text-muted);
+  border-top: 1px solid var(--border);
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .top-nav {
+    height: auto;
+  }
+
+  .nav-inner {
+    padding: 0.75rem 1.5rem;
+    flex-wrap: wrap;
+    position: relative;
+  }
+
+  .nav-toggle {
+    display: block;
+    margin-left: auto;
+    /* Push to right */
+  }
+
+  /* Hide links by default on mobile */
+  .nav-links {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    gap: 0;
+    margin-top: 1rem;
+    border-top: 1px solid var(--border-color);
+  }
+
+  /* Show when toggled */
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links li {
+    width: 100%;
+    margin-bottom: 0;
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 0.75rem 0;
+    font-size: 1rem;
+    border-bottom: 1px solid #f0f0f0;
+  }
+
+  .nav-links a:last-child {
+    border-bottom: none;
+  }
+
+  /* Hero adjustments */
+  .hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .hero-photo {
+    width: 200px;
+    margin: 0 auto;
+  }
+
+  .hero-photo img {
+    width: 100%;
+  }
+
+  .social-links {
+    justify-content: center;
+  }
+
+  /* Tabs wrapping */
+  .pub-tabs {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .pub-tab {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    flex: 1 1 auto;
+    text-align: center;
+  }
+
+  .pub-entry-selected {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .pub-thumb {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    margin-bottom: 0.5rem;
+  }
+
+  /* Student grid */
+  .grid-students {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+}

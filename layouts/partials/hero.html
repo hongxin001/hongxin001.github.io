@@ -1,0 +1,47 @@
+<section id="about" class="section hero-section">
+  <div class="container hero">
+    <div class="hero-photo">
+      <img src="{{ .Site.Params.profileImage }}" alt="Photo of {{ .Site.Title }}">
+      <div class="social-links" style="justify-content: center;">
+        {{ with .Site.Params.email }}
+        <a href="mailto:{{ . }}" class="social-icon" title="Email" target="_blank">
+          <i class="fas fa-envelope"></i>
+        </a>
+        {{ end }}
+        {{ with .Site.Params.scholar }}
+        <a href="https://scholar.google.com/citations?user={{ . }}" class="social-icon" title="Google Scholar"
+          target="_blank">
+          <i class="fas fa-graduation-cap"></i>
+        </a>
+        {{ end }}
+        {{ with .Site.Params.github }}
+        <a href="https://github.com/{{ . }}" class="social-icon" title="GitHub" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
+        {{ end }}
+        {{ with .Site.Params.linkedin }}
+        <a href="https://www.linkedin.com/in/{{ . }}" class="social-icon" title="LinkedIn" target="_blank">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        {{ end }}
+        {{ with .Site.Params.twitter }}
+        <a href="https://twitter.com/{{ . }}" class="social-icon" title="Twitter" target="_blank">
+          <i class="fab fa-twitter"></i>
+        </a>
+        {{ end }}
+        {{ with .Site.Params.cv }}
+        <a href="{{ . }}" class="social-icon" title="CV" target="_blank">
+          <i class="fas fa-file-alt"></i>
+        </a>
+        {{ end }}
+      </div>
+    </div>
+    <div class="hero-text">
+      <h1>{{ .Site.Title }}</h1>
+      <p class="hero-subtitle">{{ .Site.Params.description }}</p>
+      <div class="bio-content">
+        {{ .Content }}
+      </div>
+    </div>
+  </div>
+</section>

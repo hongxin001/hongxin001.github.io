@@ -1,0 +1,12 @@
+- role: "Area Chair"
+  items: "NeurIPS, ICML, ICLR"
+
+- role: "Senior PC"
+  items: "IJCAI"
+
+- role: "Conference Reviewer"
+  items: "CVPR, ICCV, KDD, ACL"
+
+- role: "Journal Reviewer"
+  items: "JASA, JMLR, TPAMI, IJCV, ACM Computing Surveys"
+

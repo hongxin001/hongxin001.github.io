@@ -1,0 +1,15 @@
+<section id="news" class="section">
+  <div class="container">
+    <h2 class="section-title">
+      <span class="news-icon"><i class="fas fa-newspaper"></i></span> News
+    </h2>
+    <div class="news-container">
+      {{ range first 20 .Site.Data.news }}
+      <div class="news-item">
+        <div class="news-date">{{ .date }}</div>
+        <div class="news-content">{{ .text | markdownify }}</div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>

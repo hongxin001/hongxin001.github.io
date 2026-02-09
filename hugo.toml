@@ -1,0 +1,23 @@
+baseURL = "https://hongxin001.github.io/"
+relativeURLs = true
+languageCode = "en-us"
+title = "Hongxin Wei"
+
+[params]
+  firstName = "Hongxin"
+  lastName = "Wei"
+  description = "Assistant Professor, SDS, Southern University of Science and Technology"
+  email = "weihx@sustech.edu.cn" # hongxin001 [at] e.ntu.edu.sg
+  scholar = "cABH034AAAAJ"
+  linkedin = ""
+  twitter = ""
+  github = "hongxin001"
+  profileImage = "/img/id_photo.jpg"
+  cv = "/docs/CV_hongxin_2026_02_05.pdf"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[taxonomies]
